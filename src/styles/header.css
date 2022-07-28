@@ -1,0 +1,13 @@
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    min-height: 80px;
+    max-height: 100px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#header-title{
+    color: white;
+}
