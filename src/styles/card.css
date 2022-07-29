@@ -1,5 +1,6 @@
 .card{
     border: 5px solid green;
+    border-radius: 20px;
     height: 325px;
     width: 275px;
     display: flex;
@@ -8,16 +9,17 @@
 }
 
 .card-img{
+    border-radius: inherit;
     height: 100%;
-    width: 150px;
+    width: 250px;
     object-fit: cover;
-    border: 2px solid black;
 }
 
 .card-name{
+    border-radius: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 2px solid yellow;
+    font-size: larger;
 }
