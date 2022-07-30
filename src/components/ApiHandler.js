@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardContainer from "./CardContainer";
+import Loader from "./Loader";
 
 function ApiHandler() {
   const [agents, setAgents] = useState([]);
@@ -46,8 +47,8 @@ function ApiHandler() {
 
   return (
     <>
-       {loading && (<CardContainer loading={true} agents={agents}/>)}
-      <CardContainer agents={agents} />
+       {loading && (<Loader/>)}
+       {!loading && (<CardContainer agents={agents}/>)}
     </>
   );
 }
