@@ -4,8 +4,11 @@
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
-    border: 2px solid red;
+    border-radius: 15px;
     width: 95%;
     height: 75%;
     overflow: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

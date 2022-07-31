@@ -9,7 +9,6 @@ function CardContainer(props){
         return [...array].sort(() => Math.random() - 0.5)
     }
 
-
     return(
         <div className='card-container'>
             {shuffleContainer(props.agents).map(agent => {
