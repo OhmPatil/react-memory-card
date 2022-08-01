@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Exo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: rgb(145, 145, 145); */
@@ -22,6 +20,7 @@ code {
   align-items: center;
   justify-content: space-between;
   /* background-color: #BD3944; */
-  background-color: #53212B;
+  background-color: #36171d;
+  /* background-color: black; */
   
 }

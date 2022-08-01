@@ -49,9 +49,9 @@ function Main() {
     loadCards();
   }, []);
 
-  useEffect(() => {
-    alert('Only one rule: Dont click on the same card twice!')
-  }, [])
+  // useEffect(() => {
+  //   alert('Only one rule: Dont click on the same card twice!')
+  // }, [])
 
   function handleClick(e) {
     const agentName = e.target.lastChild.textContent;
@@ -77,7 +77,7 @@ function Main() {
   }
 
   function checkWin(score){
-    if (score === 11) alert('You Win!');
+    if (score === 11) alert('Congrats! You Won.');
   }
 
   return (
