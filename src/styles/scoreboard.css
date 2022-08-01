@@ -8,6 +8,7 @@
 #current, #high{
     border: 2px solid green;
     width: 30%;
+    min-width: 150px;
     max-width: 300px;
     display: flex;
     align-items: center;

@@ -7,6 +7,8 @@ function Main() {
   const [agents, setAgents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [clickedCards, setClickedCards] = useState([]);
+  const [currentScore, setCurrentScore] = useState(0)
+  const [highScore, setHighScore] = useState(0)
 
   const getAgents = async () => {
     let agents = [];
@@ -55,10 +57,23 @@ function Main() {
   function playGame(agentName) {
     if (clickedCards.includes(agentName)) {
       console.log("YOU LOST");
-    } else {
+      resetGame()
+    } else{
       setClickedCards((prevCards) => [...prevCards, agentName]);
-      console.log(clickedCards);
+      setCurrentScore(prevScore => prevScore+1)
+      checkWin(currentScore)
+      const newScore = currentScore+1
+      if (newScore > highScore) setHighScore(newScore)
     }
+  }
+
+  function resetGame(){
+    setClickedCards([])
+    setCurrentScore(0)
+  }
+
+  function checkWin(score){
+    if (score === 11) alert('You Win!');
   }
 
   return (
@@ -66,7 +81,7 @@ function Main() {
       {loading && <Loader />}
       {!loading && (
         <>
-        <ScoreBoard current={12} high={12}/>
+        <ScoreBoard current={currentScore} high={highScore}/>
         <CardContainer agents={agents} handleClick={handleClick} />
         </>
       )}
