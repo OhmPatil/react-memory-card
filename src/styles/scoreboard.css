@@ -1,0 +1,15 @@
+#scoreboard{
+    border: 2px solid red;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+
+#current, #high{
+    border: 2px solid green;
+    width: 30%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
