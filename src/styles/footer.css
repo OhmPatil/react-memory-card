@@ -9,6 +9,19 @@
     background-color: #FD4556;
 }
 
-#footer-text{
+#footer-text, #footer-text>*{
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    gap: 8px;
+}
+
+a{
+    color: inherit;
+}
+
+a>*:hover{
+    color: black;
 }
