@@ -17,7 +17,8 @@ function CardContainer(props){
                     key={agent.uuid}
                     imgSrc={agent.fullPortrait}
                     imgAlt={agent.displayName + 'image'}
-                    cardName={agent.displayName}/>
+                    cardName={agent.displayName}
+                    handleClick={props.handleClick}/>
                 )
             })}
         </div>
