@@ -21,4 +21,7 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  /* background-color: #BD3944; */
+  background-color: #53212B;
+  
 }

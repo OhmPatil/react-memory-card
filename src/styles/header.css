@@ -6,9 +6,10 @@
     min-height: 80px;
     max-height: 100px;
     width: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: #FD4556;
 }
 
 #header-title{
     color: white;
+    font-size: 2.25rem;
 }

@@ -49,6 +49,10 @@ function Main() {
     loadCards();
   }, []);
 
+  useEffect(() => {
+    alert('Only one rule: Dont click on the same card twice!')
+  }, [])
+
   function handleClick(e) {
     const agentName = e.target.lastChild.textContent;
     playGame(agentName);

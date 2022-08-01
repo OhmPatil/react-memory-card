@@ -6,11 +6,14 @@
     flex-direction: column;
     align-items: center;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    /* background-color: #53212B; */
+    /* background-color: #53212B; */
+    background-color: #BD3944;
 }
 
 .card:hover{
     cursor: pointer;
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
 .card-img{
@@ -29,4 +32,5 @@
     width: 100%;
     font-size: larger;
     pointer-events: none;
+    color: #FFFBF5;
 }
