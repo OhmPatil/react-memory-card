@@ -7,8 +7,8 @@ function Main() {
   const [agents, setAgents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [clickedCards, setClickedCards] = useState([]);
-  const [currentScore, setCurrentScore] = useState(0)
-  const [highScore, setHighScore] = useState(0)
+  const [currentScore, setCurrentScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
 
   const getAgents = async () => {
     let agents = [];
@@ -16,15 +16,10 @@ function Main() {
     const url = "https://valorant-api.com/v1/agents";
     try {
       setLoading(true);
-      console.log("Fetching from API...");
       const response = await fetch(url, { mode: "cors" });
       const responseData = await response.json();
       agents = responseData.data;
-      console.log("AGENTS while fetching: ", agents);
-    } catch (err) {
-      console.log("ERROR");
-      console.log(err);
-    }
+    } catch (err) {}
 
     return agents;
   };
@@ -33,7 +28,6 @@ function Main() {
     const loadCards = async () => {
       const allAgents = await getAgents();
       let reqAgents = [];
-      console.log("ALL AGENTS: ", allAgents);
 
       for (let i = 0; i <= 12; i++) {
         if (allAgents[i].isPlayableCharacter) {
@@ -41,7 +35,6 @@ function Main() {
         }
       }
 
-      console.log("REQUIRED AGENTS: ", reqAgents);
       setAgents(reqAgents);
       setLoading(false);
     };
@@ -60,24 +53,23 @@ function Main() {
 
   function playGame(agentName) {
     if (clickedCards.includes(agentName)) {
-      console.log("YOU LOST");
-      resetGame()
-    } else{
+      resetGame();
+    } else {
       setClickedCards((prevCards) => [...prevCards, agentName]);
-      setCurrentScore(prevScore => prevScore+1)
-      checkWin(currentScore)
-      const newScore = currentScore+1
-      if (newScore > highScore) setHighScore(newScore)
+      setCurrentScore((prevScore) => prevScore + 1);
+      checkWin(currentScore);
+      const newScore = currentScore + 1;
+      if (newScore > highScore) setHighScore(newScore);
     }
   }
 
-  function resetGame(){
-    setClickedCards([])
-    setCurrentScore(0)
+  function resetGame() {
+    setClickedCards([]);
+    setCurrentScore(0);
   }
 
-  function checkWin(score){
-    if (score === 11) alert('Congrats! You Won.');
+  function checkWin(score) {
+    if (score === 11) alert("Congrats! You Won.");
   }
 
   return (
@@ -85,8 +77,8 @@ function Main() {
       {loading && <Loader />}
       {!loading && (
         <>
-        <ScoreBoard current={currentScore} high={highScore}/>
-        <CardContainer agents={agents} handleClick={handleClick} />
+          <ScoreBoard current={currentScore} high={highScore} />
+          <CardContainer agents={agents} handleClick={handleClick} />
         </>
       )}
     </>
